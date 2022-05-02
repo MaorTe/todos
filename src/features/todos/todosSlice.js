@@ -5,8 +5,9 @@ import { StatusFilters } from '../filters/filtersSlice';
 const initialState = {
 	status: 'idle',
 	entities: {
-		2: { id: 2, text: 'Buy milk', completed: false },
-		7: { id: 7, text: 'Clean room', completed: true },
+		2: { id: 2, text: 'Buy bread', completed: false },
+		5: { id: 5, text: 'Clean car', completed: true },
+		7: { id: 7, text: 'Read email', completed: true },
 	},
 };
 
