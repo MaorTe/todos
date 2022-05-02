@@ -14,6 +14,7 @@ function App() {
 			</nav>
 			<main>
 				<section className="medium-container">
+					<p className="meta-title">Made with Redux Toolkit</p>
 					<h2>Todos</h2>
 					<div className="todoapp">
 						<Header />
