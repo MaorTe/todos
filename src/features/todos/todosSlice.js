@@ -48,12 +48,16 @@ const todosSlice = createSlice({
 				};
 			},
 		},
+		// Use an adapter reducer function to remove a todo by ID
 		todoDeleted: todosAdapter.removeOne,
+
 		allTodosCompleted(state, action) {
 			Object.values(state.entities).forEach((todo) => {
 				todo.completed = true;
 			});
 		},
+
+		// Use an adapter function as a "mutating" update helper
 		completedTodosCleared(state, action) {
 			const completedIds = Object.values(state.entities)
 				.filter((todo) => todo.completed)
@@ -70,10 +74,11 @@ const todosSlice = createSlice({
 				todosAdapter.setAll(state, action.payload);
 				state.status = 'idle';
 			})
+			// Use another adapter function as a reducer to add a todo
 			.addCase(saveNewTodo.fulfilled, todosAdapter.addOne);
 	},
 });
-
+// -----------------------------------------------------------------------------
 export const {
 	allTodosCompleted,
 	completedTodosCleared,
