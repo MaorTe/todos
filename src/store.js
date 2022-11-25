@@ -3,10 +3,10 @@ import filtersReducer from './features/filters/filtersSlice';
 import todosReducer from './features/todos/todosSlice';
 
 const store = configureStore({
-	reducer: {
-		// Define a top-level state field named `todos`, handled by `todosReducer`
-		todos: todosReducer,
-		filters: filtersReducer,
-	},
+   reducer: {
+      // Define a top-level state field named `todos`, handled by `todosReducer`
+      todos: todosReducer,
+      filters: filtersReducer,
+   },
 });
 export default store;
